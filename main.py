@@ -34,7 +34,8 @@ if __name__ == "__main__":
     # generuje 128 bitu, prevadi do integeru a printuje integer
     for i in range(10):
         try:
-            number = int(generator.generate(128), 2)
+            spectral(generator.generate(1000))
+            monobit(generator.generate(1000))
         except ReseedException:
             print('Reseed is required')
             generator = instantiate_drgb("personalization string (is optional)", get_entropy_input(min_entropy, 1000))
